@@ -26,6 +26,9 @@ gem 'spring',        group: :development
 # Bootstrap Framework
 gem 'bootstrap-sass'
 
+# Font Awesome icons
+gem 'font-awesome-sass'
+
 # Devise framework
 gem 'devise', '~>3.3.0'
 

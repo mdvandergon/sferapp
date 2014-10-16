@@ -1,27 +1,149 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
-$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Open Sans', Arial, sans-serif;
 $navbar-height: 45px;
-$body-bg: #ecf0f1;
-$navbar-inverse-bg: #2c3e50;
-$navbar-inverse-link-color: #ecf0f1;
-$brand-primary: #f1c40f;
-$navbar-inverse-brand-color: #f1c40f;
+$body-bg: #ffffff;
+$navbar-default-bg: #f2f1ed;
+$navbar-default-link-color: #333;
 $jumbotron-bg: white;
+
+// Colors
+$brand-primary: #D2232A;
+$brand-success: #0087B8;
+$brand-info:    #BBE1EC;
+$brand-warning: #BBE1EC;
+$brand-danger:  #D2232A;
+
+// Shades
+$gray-darker:  lighten(#000, 13.5%); // #222
+$gray-dark:    lighten(#000, 20%);   // #333
+$gray:         lighten(#000, 33.5%); // #555
+$gray-light:   lighten(#000, 46.7%); // #777
+$gray-lighter: lighten(#000, 93.5%); // #eee
+
 
 
 @import 'bootstrap';
+
+.main {
+	margin-top: 65px;
+}
+.navbar {
+  opacity: 0.96;
+}
+
+.alerts {
+	position: absolute;
+	top: 65px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #333;
+	opacity: 0.66;
+}
+
+.navbar-right {
+  margin-top: 5px;
+  vertical-align: middle;
+}
+
+.navbar-brand {
+     vertical-align: middle;
+     padding: 5px 12px;
+}
+
+.navbar-brand img {
+	position: relative;
+	height: 35px;
+}
+
+.panel-default 
+.panel-heading, .panel-footer {
+	background-color: #f2f1ed;
+}
 
 
 .center {
      text-align: center;
 }
 
-.navbar-brand {
-     font-weight: bold;
-}
-
 .checkbox #user_remember_me { 
 	margin-left: 0;
 
 }
+
+/* Jumbotron */
+
+.jumbotron {
+  position: relative;
+  background: 
+        linear-gradient(
+              rgba(101, 175, 212, 0.45), 
+              rgba(0, 135, 184, 1)
+            );
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: auto;
+  min-width: 100%;
+  // padding-bottom: 10%;
+  margin-left: -2px;
+  margin-right: -2px;
+  text-align: center;
+  border-bottom: 10px solid #0087B8;
+}
+
+.jumbotron h1 {
+  font-size: 3.8em;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  vertical-align: middle;
+}
+
+.jumbotron p {
+  font-size: 2em;
+  color: #efefef;
+  vertical-align: middle;
+}
+
+// Resources on front page
+
+.resource {
+	
+}
+
+.resource .row {
+
+}
+
+.resource .row div {
+	@extend %thumbnail;
+	@extend %clearfix;
+	margin: auto 8px;
+	text-align: center;
+	padding: 15px 15px;
+	margin: 8px;
+	background-color: #f2f1ed;
+	height: 300px;
+}
+
+.resource i {
+	font-size: 2em;
+}
+
+.resource h2 {
+	color: #D2232A;
+}
+
+.resource img {
+	height: 150px;
+	width: 150px;
+}
+
+.img-circle {
+  border: 4px solid #FFFEF9;
+  border-radius: 50%;
+}
+

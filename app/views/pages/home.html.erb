@@ -1,8 +1,46 @@
 <div class="jumbotron center">
-	<h1>Welcome to my app!</h1>
+	<div class="container-fluid">
+	
 	<% if user_signed_in? %>
-	  # do something
+	<h1>Check out our latest video</h1>
+	<h2></h2>
+	<a class="btn btn-info btn-lg" role="button" href="www.google.com"><i class="fa fa-twitter"></i>  Resource</a>
+	<p></p>
+	</div>
+</div>	
+	<div class="container resource">  
+	  <div class="row">
+	  	<div class="col-lg-4 col-md-4">
+	  		<i class="fa fa-twitter"></i>
+	  		<h2>Getting Started Guide</h2>
+	  	</div>
+	  	<div class="col-lg-4 col-md-4">
+	  		<img class="img-circle" src=<%image_tag("jeremy.jpeg")%>></i>
+	  		<h2>Getting Started Guide</h2>
+	  	</div>
+	  	<div class="col-lg-4 col-md-4">
+	  		<i class="fa fa-twitter"></i>
+	  		<h2>Getting Started Guide</h2>
+	  	</div>
+	  </div>
+	  <div class="row">
+	  	<div class="col-lg-4 col-md-4">
+	  		<i class="fa fa-twitter"></i>
+	  		<h2>Getting Started Guide</h2>
+	  	</div>
+	  	<div class="col-lg-4 col-md-4">
+	  		<i class="fa fa-twitter"></i>
+	  		<h2>Getting Started Guide</h2>	  		
+	  	</div>
+	  	<div class="col-lg-4 col-md-4">
+	  		<i class="fa fa-twitter"></i>
+	  		<h2>Getting Started Guide</h2>  		
+	  	</div>
+	  </div>
+	</div>
+
 	<% else %>
+	<h1>Welcome to the SFER Portal!</h1>
 	<p>
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
 		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
