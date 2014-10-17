@@ -1,3 +1,7 @@
+  <% flash do |name, msg| %>
+        <!-- edited #{name} out-->
+    <%= content_tag(:div, msg, class: "alert alert-info alert-nav") %>
+    <% end %>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,10 +13,6 @@
       <span class="icon-bar"></span>
     </button>
     <%= link_to image_tag("SFER_logomark.svg"), root_path, class:"navbar-brand" %>
-    <% flash.each do |name, msg| %>
-          <!-- edited #{name} out-->
-      <%= content_tag(:div, msg, class: "alert alert-info alert-nav") %>
-      <% end %>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
