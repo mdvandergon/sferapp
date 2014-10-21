@@ -32,6 +32,9 @@ gem 'font-awesome-rails'
 # Devise framework
 gem 'devise', '~>3.3.0'
 
+# Chosen for better user select
+gem 'chosen-rails'
+
 
 group :development, :test do
      gem 'sqlite3'
@@ -53,4 +56,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

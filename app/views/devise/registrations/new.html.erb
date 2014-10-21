@@ -18,6 +18,11 @@
       </div>
 
       <div class="form-group">
+        <%= f.label :chapter %>
+        <%= f.select :chapter_id, options_from_collection_for_select(Chapter.all.to_a, 'id', 'name'), {include_blank: true} , {class:"form-control"} %>
+      </div>
+
+      <div class="form-group">
         <%= f.submit "Sign up", class: "btn btn-primary" %>
       </div>
     <% end %>
