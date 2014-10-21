@@ -32,6 +32,9 @@ gem 'font-awesome-rails'
 # Devise framework
 gem 'devise', '~>3.3.0'
 
+# AWS for files and media
+gem 'aws-sdk'
+
 # Chosen for better user select
 gem 'chosen-rails'
 
