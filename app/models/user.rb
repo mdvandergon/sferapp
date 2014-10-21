@@ -5,9 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :chapter
-  
-  # CHAPTERS = ['Minneapolis', 'New York']
-  validates :salesforce_id, presence: true
 
-  
+  validates :chapter_id, presence: true
+
+
 end
