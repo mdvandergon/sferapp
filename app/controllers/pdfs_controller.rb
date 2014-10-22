@@ -1,4 +1,4 @@
-class PdfsController < ActionController
+class PdfsController < ApplicationController
 
   def serve
     path = File.join(Rails.root, 'app', 'pages', params[:filename])
