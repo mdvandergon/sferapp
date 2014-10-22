@@ -8,40 +8,166 @@
 			<p class="lead"> Welcome to the portal. We're really excited to provide a space for SFER resources.</p>
 		</div>
 	</div>
-
 	<div class="resource">
+		<div class="row resource-header">
+			<h3><%= fa_icon('book')  %> SFER Guides</h3>
+			<p class="lead text-muted">Your go-to documents for getting your chapter going</p>
+		</div>
+
 	  <div class="row">
-	  	<div class="col-lg-3 col-md-3">
-	  		<div class="fill-top">
-	  			<%= fa_icon('search 4x', class:"img-circle") %>
-				</div>
-	  		<div class="fill-bottom">
-	  		<h3>Chapter Guide</h3>
-	  		<p>Let's get started!</p>
-	  		</div>
+	  	<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+	  		<%= link_to pdfs_path(filename: "chapter-guide.pdf") do %>
+					<div class="fill-top">
+		  			<%= image_tag("jeremy.jpg", class: "img-fill") %>
+					</div>
+
+		  		<div class="fill-bottom">
+		  		<h3>Chapter Guide</h3>
+		  		<p>Let's get started!</p>
+		  		</div>
+					<% end %>
 	  	</div>
-	  	<div class="col-lg-3 col-md-3">
-	  		<div class="fill-top-alt">
-	  			<%= image_tag("jeremy.jpg", class: "img-circle") %>
+	  	<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+	  		<%= link_to pdfs_path(filename: "chapter-guide.pdf") do %>
+				<div class="fill-top">
+					<%= image_tag("jeremy.jpg", class: "img-fill") %>
 	  		</div>
-	  		<div class="fill-bottom-alt">
+
+	  		<div class="fill-bottom">
 	  			<h3>Recruitment Guide</h3>
 	  			<p>Build your membership with these quick tips</p>
 	  		</div>
+				<% end %>
 	  	</div>
-	  	<div class="col-lg-3 col-md-3">
-	  		<i class="fa fa-twitter"></i>
-	  		<h3>Membership expectations</h3>
-	  		<p>Our roadmap to guide our work</p>
+	  	<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+	  		<%= link_to pdfs_path(filename: "chapter-guide.pdf") do %>
+					<div class="fill-top">
+						<%= image_tag("jeremy.jpg", class: "img-fill") %>
+					</div>
+					<div class="fill-bottom">
+	  				<h3>Membership Expectations</h3>
+	  				<p>The roadmap to guide our work</p>
+				</div>
+				<% end %>
 	  	</div>
-	  	<div class="col-lg-3 col-md-3">
-	  		<i class="fa fa-twitter"></i>
-	  		<h3>Capacity Captain Training</h3>
-	  		<p>Here's a recap of our CC training in Boston</p>
+	  	<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+	  		<%= link_to pdfs_path(filename: "chapter-guide.pdf") do %>
+					<div class="fill-top">
+						<%= image_tag("jeremy.jpg", class: "img-fill") %>
+					</div>
+					<div class="fill-bottom">
+	  				<h3>Capacity Training</h3>
+	  				<p>Here's a recap of our Capacity Captain training in Boston</p>
+					</div>
+					<% end %>
 	  	</div>
 	  </div><!-- end row -->
-	  <div class="row">
-			<h1>Summit Resources</h1>
+	  <div class="row resource-header">
+			<h3><%= fa_icon('book')  %> Presentations from our last Summit</h3>
+			<p class="lead text-muted">Sorry if we missed you at Summit, we had some great trainings.</p>
+		</div>
+
+			<div class="row">
+				<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+					<%= link_to pdfs_path(filename: "organizing-and-mobilizing.pdf") do %>
+						<div class="fill-top">
+							<%= image_tag("jeremy.jpg", class: "img-fill") %>
+						</div>
+
+						<div class="fill-bottom">
+						<h3>Orgainizing &amp; Mobilizing</h3>
+						<p>Description</p>
+						</div>
+						<% end %>
+				</div>
+				<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+					<%= link_to pdfs_path(filename: "action-oriented-media.pdf") do %>
+					<div class="fill-top">
+						<%= image_tag("jeremy.jpg", class: "img-fill") %>
+					</div>
+
+					<div class="fill-bottom">
+						<h3>Action-Oriented Media</h3>
+						<p>Description</p>
+					</div>
+					<% end %>
+				</div>
+				<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+					<%= link_to pdfs_path(filename: "power.pdf") do %>
+						<div class="fill-top">
+							<%= image_tag("jeremy.jpg", class: "img-fill") %>
+						</div>
+						<div class="fill-bottom">
+							<h3>What is Power?</h3>
+							<p>Learn how this important definition motivates our work</p>
+					</div>
+					<% end %>
+				</div>
+				<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+					<%= link_to pdfs_path(filename: "backwards-planning.pdf") do %>
+						<div class="fill-top">
+							<%= image_tag("jeremy.jpg", class: "img-fill") %>
+						</div>
+						<div class="fill-bottom">
+							<h3>Backwards Planning</h3>
+							<p>Getting ahead of yourself? Try a backwards plan!</p>
+						</div>
+						<% end %>
+				</div>
+			</div><!-- end row -->
+			<div class="row resource-header">
+				<h3><%= fa_icon('book')  %> Old School Toolkits</h3>
+				<p class="lead text-muted">Some resources for chapter activities from way back in the day.</p>
+			</div>
+
+				<div class="row">
+					<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+						<%= link_to pdfs_path(filename: "college-101.pdf") do %>
+							<div class="fill-top">
+								<%= image_tag("jeremy.jpg", class: "img-fill") %>
+							</div>
+
+							<div class="fill-bottom">
+							<h3>College 101</h3>
+							<p>Bring k-12 students to your campus and build relationships with local schools</p>
+							</div>
+							<% end %>
+					</div>
+					<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+						<%= link_to pdfs_path(filename: "recruitment-2011.pdf") do %>
+						<div class="fill-top">
+							<%= image_tag("jeremy.jpg", class: "img-fill") %>
+						</div>
+
+						<div class="fill-bottom">
+							<h3>Recruitment</h3>
+							<p>Tips and tricks for membership</p>
+						</div>
+						<% end %>
+					</div>
+					<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+						<%= link_to pdfs_path(filename: "school-visits.pdf") do %>
+							<div class="fill-top">
+								<%= image_tag("jeremy.jpg", class: "img-fill") %>
+							</div>
+							<div class="fill-bottom">
+								<h3>School Visits</h3>
+								<p>How coordinate a visit with your chapter</p>
+						</div>
+						<% end %>
+					</div>
+					<div class="col-lg-3 col-md-3 mark-loves-to-hover">
+						<%= link_to pdfs_path(filename: "ed-minor.pdf") do %>
+							<div class="fill-top">
+								<%= image_tag("jeremy.jpg", class: "img-fill") %>
+							</div>
+							<div class="fill-bottom">
+								<h3>Ed Minor</h3>
+								<p>Here's how to create an Ed minor at your school</p>
+							</div>
+							<% end %>
+					</div>
+				</div><!-- end row -->
 
 	  </div>
 	</div>
@@ -49,7 +175,7 @@
 <% else %>
 	<div class="jumbotron">
 
-	<h1>SFER Resource Portal</h1>
+	<h1>SFER Portal</h1>
 	<p>
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-success btn-lg" %>
 		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>

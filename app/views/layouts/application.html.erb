@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>sferapp</title>
+  <title>SFER Portal</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -12,5 +12,6 @@
 	<div class="container main">
 	<%= yield %>
 	</div>
+  <%= render 'layouts/footer' %>
 </body>
 </html>

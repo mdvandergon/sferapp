@@ -17,3 +17,35 @@
 
 
 @import "font-awesome";
+
+.mark-loves-to-hover:hover {
+  div.fill-top {
+    z-index:99;
+    // height: 50%;
+    // transition: all 1.5s;
+
+  }
+  .fill-top img {
+    // height: 85%;
+    // transition: all 1.5s;
+  }
+  div.fill-bottom {
+    overflow: hidden;
+    z-index: 101;
+    transition: all 0.4s;
+    padding-top: 10px;
+    transform: translateY(-35%);
+    -webkit-transform: translateY(-35%);
+  }
+
+  div.fill-bottom {
+    opacity: 0.95;
+  }
+
+  p {
+    overflow: hidden;
+    transition: all 0.4s;
+    display: inline-block;
+  }
+
+}
