@@ -12,9 +12,11 @@
 	<div class="resource">
 	  <div class="row">
 	  	<div class="col-lg-3 col-md-3">
-	  		<%= link_to page_path(pdf.serve('chapter-guide.pdf')) do %> 
+	  		<div class="fill-top">
+					<!-- <%= link_to page_path(pdf.serve('chapter-guide.pdf')) do %>  -->
 	  			<%= fa_icon('search 4x', class:"img-circle") %>
-	  		<% end %>
+	  		<!-- <% end %> -->
+				</div>
 	  		<div class="fill-bottom">
 	  		<h3>Chapter Guide</h3>
 	  		<p>Let's get started!</p>
