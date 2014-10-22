@@ -12,12 +12,12 @@
 	<div class="resource">
 	  <div class="row">
 	  	<div class="col-lg-3 col-md-3">
-	  		<div class="fill-top">
+	  		<%= link_to page_path(pdf.serve('chapter-guide.pdf')) do %> 
 	  			<%= fa_icon('search 4x', class:"img-circle") %>
-	  		</div>
+	  		<% end %>
 	  		<div class="fill-bottom">
-	  		<h3>Getting Started Guide</h3>
-	  		<p>Get the rundown on SFER</p>
+	  		<h3>Chapter Guide</h3>
+	  		<p>Let's get started!</p>
 	  		</div>
 	  	</div>
 	  	<div class="col-lg-3 col-md-3">
@@ -25,22 +25,23 @@
 	  			<%= image_tag("jeremy.jpg", class: "img-circle") %>
 	  		</div>
 	  		<div class="fill-bottom-alt">
-	  			<h3>Getting Started Guide</h3>
-	  			<p>Get the rundown on SFER</p>
+	  			<h3>Recruitment Guide</h3>
+	  			<p>Build your membership with these quick tips</p>
 	  		</div>
 	  	</div>
 	  	<div class="col-lg-3 col-md-3">
 	  		<i class="fa fa-twitter"></i>
-	  		<h3>Getting Started Guide</h3>
-	  		<p>Get the rundown on SFER</p>
+	  		<h3>Membership expectations</h3>
+	  		<p>Our roadmap to guide our work</p>
 	  	</div>
 	  	<div class="col-lg-3 col-md-3">
 	  		<i class="fa fa-twitter"></i>
-	  		<h3>Getting Started Guide</h3>
-	  		<p>Get the rundown on SFER</p>
+	  		<h3>Capacity Captain Training</h3>
+	  		<p>Here's a recap of our CC training in Boston</p>
 	  	</div>
 	  </div><!-- end row -->
 	  <div class="row">
+			<h1>Summit Resources</h1>
 
 	  </div>
 	</div>
@@ -68,7 +69,7 @@
 		<div class="col-lg-4 col-md-4">
 			<%= fa_icon('location-arrow 2x', class: "blue-circle")  %>
 			<h4>Handmade in Minnesota</h4>
-			<p class="text-muted">Well, it is sort of handmade. It involved a lot of typing.</p>  		
+			<p class="text-muted">Well, it is sort of handmade. It involved a lot of typing.</p>
 		</div>
 	</div>
 	<% end %>

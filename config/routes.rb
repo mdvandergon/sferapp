@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :chapters
 
-  devise_for :users
-  root 'pages#home'
+  devise_for :users, controllers: {:registrations => "registrations"}
+  root 'static_pages#home'
 
-  get "about" => "pages#about"
+  get "about" => "static_pages#about"
+
+  get "/pages/*id" => 'pages#show', as: :page
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

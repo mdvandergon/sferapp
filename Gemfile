@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.1.3'
 
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use SCSS for stylesheets
@@ -35,12 +37,17 @@ gem 'devise', '~>3.3.0'
 # AWS for files and media
 gem 'aws-sdk'
 
+# High-Voltage for pdfs
+gem 'high_voltage'
+
 # Chosen for better user select
 gem 'chosen-rails'
 
 
 group :development, :test do
      gem 'sqlite3'
+     gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+     gem 'pry-byebug', '~> 1.3.2' # behind latest version b/c jazz_hands needs pry 0.9 and this is the only way to have them not conflict.
 end
 
 group :production do

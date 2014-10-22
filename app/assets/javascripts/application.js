@@ -14,11 +14,11 @@
 //= require jquery_ujs
 //= require chosen-jquery
 //= require bootstrap
-//= require turbolinks
 //= require_tree .
 
 $(function () {
   $("#user_chapter_id").chosen({
-    placeholder_text_single: "Choose Your Chapter"
+    placeholder_text_single: "Choose Your Chapter",
+    width: "100%"
   });
 });
