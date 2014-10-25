@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022004302) do
+ActiveRecord::Schema.define(version: 20141024222909) do
 
   create_table "chapters", force: true do |t|
     t.string   "name"
     t.string   "salesforce_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state_program"
   end
 
   create_table "users", force: true do |t|

@@ -43,6 +43,9 @@ gem 'high_voltage'
 # Chosen for better user select
 gem 'chosen-rails'
 
+# Mixpanel
+gem 'mixpanel-ruby'
+
 
 group :development, :test do
      gem 'sqlite3'

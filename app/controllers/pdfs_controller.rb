@@ -8,7 +8,7 @@ class PdfsController < ApplicationController
     :disposition => 'inline',
     :type => 'application/pdf',
     :x_sendfile => true )
-
+    Tracker.track(current_user.email, "Viewed PDF #{params[:filename]}")
   end
 
 end
