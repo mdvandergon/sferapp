@@ -18,7 +18,7 @@
                             "last_name": "<%=current_user.last_name %>",
                             "chapter_name": "<%=current_user.chapter.name %>",
                             "last-login": "<%= DateTime.now %>"});
-      mixpanel.identify(<%= current_user.email %>);
+      mixpanel.identify("<%= current_user.email %>");
     </script>
   <% end %>
 </head>

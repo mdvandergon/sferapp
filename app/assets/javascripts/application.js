@@ -23,9 +23,9 @@ $(function () {
   });
 });
 
-$(function () {
+$(document).ready(function () {
   var mq = window.matchMedia('@media all and (max-width: 700px)');
   if(mq.matches) {
-    $(".mark-likes-to-hover").removeClass('.mark-likes-to-hover');
-  } else {}
+    $(".mark-loves-to-hover").removeClass('mark-loves-to-hover');
+  };
 });
