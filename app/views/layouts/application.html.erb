@@ -4,6 +4,7 @@
   <title>SFER Portal</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag :modernizr %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- start Mixpanel -->
@@ -17,7 +18,7 @@
                             "last_name": "<%=current_user.last_name %>",
                             "chapter_name": "<%=current_user.chapter.name %>",
                             "last-login": "<%= DateTime.now %>"});
-      mixpanel.identify(<%= current_user.email %>);                      
+      mixpanel.identify(<%= current_user.email %>);
     </script>
   <% end %>
 </head>

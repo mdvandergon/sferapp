@@ -46,6 +46,9 @@ gem 'chosen-rails'
 # Mixpanel
 gem 'mixpanel-ruby'
 
+# Modernizer to disable double-tap on mobile
+gem 'modernizr-rails'
+
 
 group :development, :test do
      gem 'sqlite3'
