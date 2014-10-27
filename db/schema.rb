@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024222909) do
+ActiveRecord::Schema.define(version: 20141027222731) do
 
   create_table "chapters", force: true do |t|
     t.string   "name"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20141024222909) do
     t.integer  "chapter_id"
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "admin"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

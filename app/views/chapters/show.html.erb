@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chapter:</strong>
+  <%= @chapter.name %>
+</p>
+
+<!-- Only edit if admin  -->
+<% if current_user.admin == true %>
+  <%= link_to 'Edit', edit_chapter_path(@chapter) %>
+<% end %>
+<%= link_to 'Index', chapters_path %>
