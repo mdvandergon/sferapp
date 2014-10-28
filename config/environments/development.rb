@@ -37,4 +37,14 @@ Rails.application.configure do
 
   # Required for Heroku
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # config delivery method
+  config.action_mailer.delivery_method = :letter_opener
+
+  Sferapp::Application.config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "[Website Error] ",
+    :sender_address => %{"notifier" <notifier@studentsforedreform.org>},
+    :exception_recipients => %w{mark@studentsforedreform.org}
+  }
 end

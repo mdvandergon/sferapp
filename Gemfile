@@ -49,11 +49,15 @@ gem 'mixpanel-ruby'
 # Modernizer to disable double-tap on mobile
 gem 'modernizr-rails'
 
+# Exception notification
+gem 'exception_notification'
+
 
 group :development, :test do
      gem 'sqlite3'
      gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
      gem 'pry-byebug', '~> 1.3.2' # behind latest version b/c jazz_hands needs pry 0.9 and this is the only way to have them not conflict.
+     gem 'letter_opener'
 end
 
 group :production do

@@ -76,6 +76,23 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { :host => 'http://mdvandergon-sferapp.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'studentsforedreform.org' }
+
+  # config for mandril
+  config.action_mailer.smtp_settings = {
+    :port =>           '587',
+    :address =>        'smtp.mandrillapp.com',
+    :user_name =>      ENV['MANDRILL_USERNAME'],
+    :password =>       ENV['MANDRILL_APIKEY'],
+    :domain =>         'studentsforedreform.org',
+    :authentication => :plain
+  }
+
+  Sferapp::Application.config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "[Website Error] ",
+    :sender_address => %{"notifier" <notifier@studentsforedreform.org>},
+    :exception_recipients => %w{mark@studentsforedreform.org}
+  }
 
 end
