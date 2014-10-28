@@ -1,12 +1,30 @@
-<%= render 'static_pages/home' unless user_signed_in? %>
+<%= render 'static_pages/home' unless current_user.admin? %>
 
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+    <h4>Add a New Chapter</h4>
+    <%= link_to 'New Chapter', new_chapter_path, class: "btn btn-md btn-success" %>
+
+  </div>
+  <div class="col-lg-4">
+    <h4>Add a Multiple Chapters</h4>
+    <%= form_tag import_chapters_path, multipart: true, class:"form-group" do %>
+
+    <%= file_field_tag :file %><%= submit_tag "UPLOAD", class: "btn btn-md btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">All Chapters</div>
 <table class="table">
   <thead>
     <tr>
       <th>Name</th>
       <th>State Program</th>
       <th>Salesforce Id</th>
-      <th colspan="3"></th>
+      <th colspan="3">Options</th>
     </tr>
   </thead>
 
@@ -34,8 +52,4 @@
 </table>
 
 <br>
-
-<!-- Only add new if Admin -->
-<% if current_user.admin == true %>
-  <%= link_to 'New Chapter', new_chapter_path %>
-<% end %>
+</div>

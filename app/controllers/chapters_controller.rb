@@ -34,6 +34,11 @@ class ChaptersController < ApplicationController
      end
    end
 
+   def import
+		Chapter.import(params[:file])
+		redirect_to chapters_url, notice: "Chapters Imported"
+	 end
+
    def destroy
      @chapter.destroy
      redirect_to chapters_url

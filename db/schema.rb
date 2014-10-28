@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027222731) do
+ActiveRecord::Schema.define(version: 20141028160939) do
 
   create_table "chapters", force: true do |t|
     t.string   "name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20141027222731) do
     t.datetime "updated_at"
     t.string   "state_program"
   end
+
+  add_index "chapters", ["salesforce_id"], name: "index_chapters_on_salesforce_id", unique: true
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

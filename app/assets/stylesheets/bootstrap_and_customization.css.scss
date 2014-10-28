@@ -40,6 +40,9 @@ $gray-lighter: lighten(#000, 93.5%); // #eee
 	margin-top: 65px;
 }
 
+input[type="file"] {
+	display: inline-block;
+}
 
 .alert-nav {
   margin-bottom: 0;
