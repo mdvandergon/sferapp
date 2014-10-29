@@ -108,6 +108,9 @@ a.navbar-brand {
 // Footers
 
 .footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 	background-color: #e4e2da;
 	height: 10%;
 	padding: 20px 0;
