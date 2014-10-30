@@ -8,11 +8,10 @@ class Chapter < ActiveRecord::Base
   validates :salesforce_id, presence: true, uniqueness: {case_sensitive: false}
 
   def self.import(file)
-  	CSV.foreach(file.path, encoding: 'utf-8', headers: true) do |row|
+  	CSV.foreach(file.path, headers: true) do |row|
       salesforce_id = row.to_hash['salesforce_id']
-      if Chapter.where(salesforce_id: salesforce_id) != nil
+      if Chapter.where(salesforce_id: salesforce_id).any? == false
   		  Chapter.create!(row.to_hash)
-			else raise "Duplicates detected"
       end
   	end
   end
