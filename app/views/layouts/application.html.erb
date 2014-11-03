@@ -16,9 +16,11 @@
     <% if signed_in? %>
     <script type="text/javascript">
 
-      mixpanel.people.set({"first_name": "<%=current_user.first_name %>",
-                            "last_name": "<%=current_user.last_name %>",
+      mixpanel.people.set({"$first_name": "<%=current_user.first_name %>",
+                            "$last_name": "<%=current_user.last_name %>",
                             "chapter_name": "<%=current_user.chapter.name %>",
+                            "state_program": "<%=current_user.chapter.state_program %>",
+                            "$email": "<%=current_user.email %>",
                             "last-login": "<%= DateTime.now %>"});
       mixpanel.identify("<%= current_user.email %>");
     </script>
